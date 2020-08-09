@@ -1,0 +1,30 @@
+The project Structure : 
+the project contains 4 folders : 
+	----Classifical methods : which contain the codes for classicals methods : LBP, EigenFaces, FisherFaces
+	----CNN : which contains the code for CNN model on 3 datasets avaible in two versions : 
+			---> Jupyter Files :  the CNN model is available as a jupyter notebook
+			---> Python Files :	the CNN model is available as normal python files
+	----original datasets: containing the original three datasets (before applying the split into test and train) 
+	----datasets : this folder will be created when running the main python file, which contains all the 
+					3 splitted (train and test) datasets along with their corresponding Region of interest images
+					each dataset folder contains the following : 
+					--->orig_images: contains the splitted dataset (into train and test)
+					--->ROI images : images used for our method, which contain two more folders:	
+						-ROI dataset: used by our method by the CNN module 
+						-KNN dataset: ised by our method by the decision module
+
+
+					and the datasets needed for the decision module of our method (noted as KNN dataset)
+	----Our proposed method : which contains two modules (CNN and decision modules) of our proposed method, while the third 						module is localed in this same project (named preprocessing)
+
+the project contains the following python files:
+	----cornerDetectors.py : which contains the the corner detection algorithms, this file is called in the preprocessing 
+							python file
+	----preprocessing.py : which contains the datasets preprocessing (splitting) methods, the code which creates the region of interest image datasets (our first module) is included in the file 
+	----Main.py : which is the main file of our propsed method, it calls all the other modules (preprocessing, CNN, and decision module)					 
+
+----------------
+To execute the code of our method : run the main.py file with all modules on the specified dataset
+to execute the codes for CNN and the classifical methods : run the file inside the folder; these methodes require the "datasets folder " which is created by running the first module of the main.py file.
+
+Please site our paper if you use our work: Face Recognition Based on Harris Detector and Convolutional Neural Networks - Assaad Oussama Zeghina, Oussama Zoubia and Ali Behloul
